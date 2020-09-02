@@ -7,14 +7,10 @@ File two: world_pop.csv
 
 
 For the wine data, we used Jupyter/Pandas to read the file into a data frame. We cleaned the data by removing unwanted columns. Next, we dropped any row with null values. We transformed the the price column from a float to a currency value and created a new price column. We compiled the final data frame by removing the old price column.
+For the world population data, we dropped some columns and renamed others.  We also cleaned up some values to match the wine data or to fit as an integer.
 
 
-World pop
-
-
-
-
-The final data frames were uploaded to Postgres SQL. 
+The final data frames were uploaded to Postgres SQL.  There, we ran into an issue where "SELECT \*" caused issues as {wine_data.}country and {worldpop.}country were duplicates, so we renamed one of the columns instead of doing "SELECT wine_data.country, worldpop.country, {etc}".  We used an inner join to merge the two tables and dropped some additional columns before exporting the finished table to a .csv file.
 
 
 
