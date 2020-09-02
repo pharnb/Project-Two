@@ -1,3 +1,24 @@
+ETL Project Report
+
+We found our data on kaggle.com. We found two data sources in CSV format which provided data about the wine industry.
+
+File one: wine_data.csv
+File two: world_pop.csv
+
+
+For the wine data, we used Jupyter/Pandas to read the file into a data frame. We cleaned the data by removing unwanted columns. Next, we dropped any row with null values. We transformed the the price column from a float to a currency value and created a new price column. We compiled the final data frame by removing the old price column.
+
+
+World pop
+
+
+
+
+The final data frames were uploaded to Postgres SQL. 
+
+
+
+
 # Project-Two
 # Guidelines for ETL Project
 
